@@ -31,4 +31,21 @@ public class withoutBuilderPattern {
 
     }
 
+    public void searchByTextAndBrands(){
+        String textToSearch = "Search";
+        String[] brands = {"brand1", "brand 2"};
+        String type = "Type";
+        String size = "Size";
+        float price = 1000;
+
+        withoutBuilder.pages.Search search = new withoutBuilder.pages.Search();
+        withoutBuilder.pages.Search searchResults = new withoutBuilder.pages.Search();
+
+//        searchResults = search.search(textToSearch, brands,"","",null);
+//        OR
+        searchResults = search.searchByTextAndBrands(textToSearch, brands);
+        assert (searchResults.isValidResult() == (true));
+
+    }
+
 }

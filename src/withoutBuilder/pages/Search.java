@@ -34,6 +34,11 @@ public class Search {
         return this;
     }
 
+    public Search searchByTextAndBrands(String textToSearch, String[] brands) {
+        System.out.println("Filtering by" + textToSearch + brands + "and returning results");
+        return this;
+    }
+
     public boolean isValidResult() {
         return true;
     }
